@@ -3,7 +3,7 @@
 *_printf - entry point
 *@format:function parameter
 */
-void _printf(const char *format, ...)
+int _printf(const char *format, ...)
 {
 va_list args;
 va_start(args, format);
@@ -62,5 +62,6 @@ myputchar(*format);
 format++;
 }
 va_end(args);
+return (0);
 }
 
